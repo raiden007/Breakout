@@ -68,6 +68,9 @@ public class Breakout extends GraphicsProgram {
 		int startYPosition = BRICK_Y_OFFSET;
 		
 		for (int i=0;i<NBRICK_ROWS;i++) {
+			if (i==0||i==1) {
+				rect.setFillColor(Color.RED);
+			}
 			for (int j=0;j<NBRICKS_PER_ROW;j++) {
 				
 				GRect rect = new GRect(startXPosition, startYPosition, BRICK_WIDTH, BRICK_HEIGHT);
@@ -78,11 +81,9 @@ public class Breakout extends GraphicsProgram {
 			}
 			startXPosition = 50;
 			startYPosition += BRICK_HEIGHT+BRICK_SEP;
-			if (i==0||i==1) {
-				rect.setFillColor(Color.RED);
-			}
+
 		}
 	}
 	
-//	private GRect rect;
+	private GRect rect;
 }
