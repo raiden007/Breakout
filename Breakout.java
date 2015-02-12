@@ -59,6 +59,19 @@ public class Breakout extends GraphicsProgram {
 
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
-		
+		setupGame();
+		playGame();
 	}
+	
+	private void setupGame() {
+		for (int i=0;i<NBRICK_ROWS;i++) {
+			for (int j=0;j<NBRICKS_PER_ROW;j++) {
+				GRect rect = new GRect(100, 100, 150, 100);
+				add (rect);				
+			}
+
+		}
+	}
+	
+//	private GRect rect;
 }
