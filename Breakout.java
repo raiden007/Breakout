@@ -58,7 +58,7 @@ public class Breakout extends GraphicsProgram {
 
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
-		this.resize(1000,1000);
+		this.resize(500,1000);
         pause(1000);
 		setupGame();
 //		playGame();
