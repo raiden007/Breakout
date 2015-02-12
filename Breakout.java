@@ -42,10 +42,10 @@ public class Breakout extends GraphicsProgram {
 	private static final int BRICK_SEP = 4;
 
 	/** Width of a brick */
-	private static final int BRICK_WIDTH = 20;
+	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
 
 	/** Height of a brick */
-	private static final int BRICK_HEIGHT = 10;
+	private static final int BRICK_HEIGHT = 8;
 
 	/** Radius of the ball in pixels */
 	private static final int BALL_RADIUS = 10;
@@ -72,7 +72,7 @@ public class Breakout extends GraphicsProgram {
 				
 				GRect rect = new GRect(startXPosition, startYPosition, BRICK_WIDTH, BRICK_HEIGHT);
 				add (rect);
-				startXPosition = startXPosition+BRICK_WIDTH+BRICK_SEP; 
+				startXPosition += BRICK_WIDTH+BRICK_SEP; 
 			}
 			startXPosition = 50;
 			startYPosition += BRICK_SEP;
