@@ -67,7 +67,7 @@ public class Breakout extends GraphicsProgram {
 		int startXPosition = 50;
 		int startYPosition = BRICK_Y_OFFSET;
 		
-		for (int i=0;i<NBRICK_ROWS;i++) {
+//		for (int i=0;i<NBRICK_ROWS;i++) {
 			for (int j=0;j<NBRICKS_PER_ROW;j++) {
 				
 				GRect rect = new GRect(startXPosition, startYPosition, BRICK_WIDTH, BRICK_HEIGHT);
@@ -76,7 +76,7 @@ public class Breakout extends GraphicsProgram {
 			}
 			startXPosition = 50;
 			startYPosition += BRICK_SEP;
-		}
+//		}
 	}
 	
 //	private GRect rect;
