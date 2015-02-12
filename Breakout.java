@@ -45,7 +45,7 @@ public class Breakout extends GraphicsProgram {
 //	private static final int BRICK_WIDTH =
 //	  (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
 	
-	private static final int BRICK_WIDTH =1000;
+	private static final int BRICK_WIDTH =500;
 
 	/** Height of a brick */
 	private static final int BRICK_HEIGHT = 50;
