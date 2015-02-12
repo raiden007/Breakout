@@ -70,6 +70,8 @@ public class Breakout extends GraphicsProgram {
 		for (int i=0;i<NBRICK_ROWS;i++) {
 			if (i==0||i==1) {
 				rect.setFillColor(Color.RED);
+			} else {
+				
 			}
 			for (int j=0;j<NBRICKS_PER_ROW;j++) {
 				
