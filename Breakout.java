@@ -42,13 +42,11 @@ public class Breakout extends GraphicsProgram {
 	private static final int BRICK_SEP = 4;
 
 	/** Width of a brick */
-//	private static final int BRICK_WIDTH =
-//	  (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
-	
-	private static final int BRICK_WIDTH =100;
+	private static final int BRICK_WIDTH =
+	  (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
 
 	/** Height of a brick */
-	private static final int BRICK_HEIGHT = 100;
+	private static final int BRICK_HEIGHT = 8;
 
 	/** Radius of the ball in pixels */
 	private static final int BALL_RADIUS = 10;
@@ -67,7 +65,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private void setupGame() {
 			
-		int startXPosition = 50;
+		int startXPosition = WIDTH-(10*(BRICK_WIDTH+BRICK_SEP) / 2);
 		int startYPosition = BRICK_Y_OFFSET;
 		
 		for (int i=0;i<NBRICK_ROWS;i++) {
@@ -77,7 +75,7 @@ public class Breakout extends GraphicsProgram {
 				add (rect);
 				startXPosition += BRICK_SEP; 
 			}
-			startXPosition = 50;
+			startXPosition = WIDTH-(10*(BRICK_WIDTH+BRICK_SEP) / 2);
 			startYPosition += BRICK_SEP;
 		}
 	}
