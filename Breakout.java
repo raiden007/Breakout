@@ -77,7 +77,7 @@ public class Breakout extends GraphicsProgram {
 				add (rect);
 				startXPosition += BRICK_SEP; 
 			}
-			startXPosition = WIDTH-(10*(BRICK_WIDTH+BRICK_SEP) / 2);
+			startXPosition = 50;
 			startYPosition += BRICK_SEP;
 		}
 	}
