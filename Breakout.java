@@ -61,7 +61,7 @@ public class Breakout extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 		println(BRICK_WIDTH);
 		println(WIDTH);
-		this.resize(400,HEIGHT);
+		this.resize(450,HEIGHT);
         pause(100);
 		setupGame();
 //		playGame();
