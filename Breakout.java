@@ -70,10 +70,12 @@ public class Breakout extends GraphicsProgram {
 		
 		for (int i=0;i<NBRICK_ROWS;i++) {
 			for (int j=0;j<NBRICKS_PER_ROW;j++) {
+				
 				GRect rect = new GRect(startXPosition, startYPosition, BRICK_WIDTH, BRICK_HEIGHT);
 				add (rect);
 				startXPosition += BRICK_SEP; 
 			}
+			startXPosition = WIDTH-(10*(BRICK_WIDTH+BRICK_SEP) / 2);
 			startYPosition += BRICK_SEP;
 		}
 	}
