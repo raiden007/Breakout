@@ -74,12 +74,12 @@ public class Breakout extends GraphicsProgram {
 				add (rect);
 				startXPosition += BRICK_WIDTH+BRICK_SEP;
 				rect.setFilled(true);
-				rect.setFillColor(Color.RED);
+
 			}
 			startXPosition = 50;
 			startYPosition += BRICK_HEIGHT+BRICK_SEP;
 			if (i==0||i==1) {
-
+				rect.setFillColor(Color.RED);
 			}
 		}
 	}
