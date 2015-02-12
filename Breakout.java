@@ -77,8 +77,14 @@ public class Breakout extends GraphicsProgram {
 				rect.setFilled(true);
 				if (i==0||i==1) {
 					rect.setFillColor(Color.RED);
+				} else if (i==2||i==3){
+					rect.setFillColor(Color.ORANGE);
+				} else if (i==4||i==5) {
+					rect.setFillColor(Color.YELLOW);
+				} else if (i==6||i==7) {
+					rect.setFillColor(Color.GREEN);
 				} else {
-					
+					rect.setFillColor(Color.CYAN);
 				}
 
 			}
