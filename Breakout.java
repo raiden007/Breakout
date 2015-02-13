@@ -164,7 +164,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private GObject getCollidingObject(double x, double y) {
 		GObject topLeftCollision = getElementAt(x,y);
-		if (object==null) {
+		if (topLeftCollision==null) {
 			return null;
 		} else {
 			return topLeftCollision;
