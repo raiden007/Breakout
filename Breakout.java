@@ -59,25 +59,23 @@ public class Breakout extends GraphicsProgram {
 
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
-	//	this.resize(450,650);
-        pause(100);
         addMouseListeners();
 		setupGame();
 		playGame();
 	}
 	
+	// Setups the game
 	private void setupGame() {
-		
 		setupBricks();
 		setupPaddle();
 	}
-			
+		
+	// Places the bricks
 	private void setupBricks() {
 		
-//		int startXPosition = (WIDTH-(BRICK_WIDTH*NBRICKS_PER_ROW))/2;
 		int startXPosition = 0;		
 		int startYPosition = BRICK_Y_OFFSET;
-		
+		// For each row adds bricks and color
 		for (int i=0;i<NBRICK_ROWS;i++) {
 			for (int j=0;j<NBRICKS_PER_ROW;j++) {
 				rect = new GRect(startXPosition, startYPosition, BRICK_WIDTH, BRICK_HEIGHT);
@@ -103,6 +101,7 @@ public class Breakout extends GraphicsProgram {
 		
 	}
 	
+	// Sets up the paddle
 	private void setupPaddle() {
 		int paddleXPosition = (WIDTH-PADDLE_WIDTH)/2;
 		paddle = new GRect (paddleXPosition,HEIGHT-PADDLE_Y_OFFSET,PADDLE_WIDTH,PADDLE_HEIGHT);
@@ -110,6 +109,7 @@ public class Breakout extends GraphicsProgram {
 		add(paddle);
 	}
 	
+	// Tracks the mouse coordonates and moves the paddle
 	public void mouseMoved(MouseEvent e) {
 		double paddleXPosition = e.getX() - lastX;
 		paddle.move(paddleXPosition, 0);
@@ -119,13 +119,14 @@ public class Breakout extends GraphicsProgram {
 		} else if (lastX>WIDTH-PADDLE_WIDTH) {
 			paddle.setLocation(WIDTH-PADDLE_WIDTH, HEIGHT-PADDLE_Y_OFFSET);
 		}
-//		println(e.getX());
 	}
 	
+	// Play the game
 	public void playGame() {
 		setupBall();
 	}
 	
+	// Places the ball and moves it
 	public void setupBall() {
 		int ballXPosition = (WIDTH-BALL_RADIUS)/2;
 		int ballYPosition = (HEIGHT-BALL_RADIUS)/2;
@@ -135,24 +136,27 @@ public class Breakout extends GraphicsProgram {
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		vy += 3;
-			while (true) {
-				ball.move(vx, vy);
-				pause(20);
-		//		println(ballYPosition);
-				println(ball.getX());				
-				println(ball.getY());
-				if (ball.getY()>=590) {
-					vy = -vy;
-				} else if (ball.getY()<=0) {
-					vy = -vy;
-				} else if (ball.getX()<=0) {
-					vx = -vx;
-				} else if (ball.getX()>=390) {
-					vx = -vx;
-				}
+		int speed = 100;
+		
+		// moving the ball
+		while (true) {
+			ball.move(vx, vy);
+			pause(speed);
+			if (ball.getY()>=590) {
+				vy = -vy;
+			} else if (ball.getY()<=0) {
+				vy = -vy;
+			} else if (ball.getX()<=0) {
+				vx = -vx;
+			} else if (ball.getX()>=390) {
+				vx = -vx;
 			}
+			speed--;
+		}
 	}
 	
+	
+	// Instance Variables
 	private GRect rect;
 	private GRect paddle;
 	private double lastX;
