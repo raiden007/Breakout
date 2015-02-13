@@ -158,7 +158,9 @@ public class Breakout extends GraphicsProgram {
 			if (collider==paddle) {
 				vy = -vy;
 			}  else if (collider!=null) {
+				remove(collider);
 				vy = -vy;
+				
 			}
 		}
 		GLabel label = new GLabel ("YOU LOST!!!",(WIDTH-200)/2,HEIGHT/2);
