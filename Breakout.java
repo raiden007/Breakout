@@ -127,13 +127,13 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void setupBall() {
-		ball = new GOval ((WIDTH-BALL_RADIUS)/2,(HEIGHT-BALL_RADIUS)/2,BALL_RADIUS,BALL_RADIUS);
+		int ballXPosition = (WIDTH-BALL_RADIUS)/2;
+		int ballYPosition = (HEIGHT-BALL_RADIUS)/2;
+		ball = new GOval (ballXPosition,ballYPosition,BALL_RADIUS,BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball);
 		vx = rgen.nextDouble(1.0, 3.0);
-		println(vx);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
-		println(vx);
 		vy += 3;
 			while (true) {
 				ball.move(vx, vy);
