@@ -119,7 +119,7 @@ public class Breakout extends GraphicsProgram {
 		} else if (lastX>WIDTH-PADDLE_WIDTH) {
 			paddle.setLocation(WIDTH-PADDLE_WIDTH, HEIGHT-PADDLE_Y_OFFSET);
 		}
-		println(e.getX());
+//		println(e.getX());
 	}
 	
 	public void playGame() {
@@ -131,14 +131,13 @@ public class Breakout extends GraphicsProgram {
 		ball.setFilled(true);
 		add(ball);
 		vx = rgen.nextDouble(1.0, 3.0);
+		println(vx);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
+		println(vx);
 		vy += 3;
 			while (true) {
-
-
-
 				ball.move(vx, vy);
-				pause(100);
+				pause(10000);
 			}
 	}
 	
