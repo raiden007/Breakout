@@ -137,7 +137,7 @@ public class Breakout extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		vy += 3;
 		speed = 10;
-		pause(1000);
+		showTimer();
 		// moving the ball
 		int lives = NTURNS;
 		while (lives>0) {
@@ -203,6 +203,15 @@ public class Breakout extends GraphicsProgram {
 			return topLeftCollision;
 		}
 		
+	}
+	
+	private void showTimer() {
+		pause(1000);
+		GLabel label = new GLabel ("3",(WIDTH-200)/2,HEIGHT/2);
+		label.setFont("Serif-36");
+		label.setColor(Color.RED);
+		add(label);
+		remove(label);
 	}
 	
 	
