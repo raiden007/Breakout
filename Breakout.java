@@ -136,7 +136,7 @@ public class Breakout extends GraphicsProgram {
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		vy += 3;
-		int speed = 200;
+		int speed = 20;
 		int lives = NTURNS;
 		
 		// moving the ball
@@ -156,7 +156,7 @@ public class Breakout extends GraphicsProgram {
 			GObject collider = getCollidingObject(ball.getX(),ball.getY());
 			println(collider);
 			if (collider==paddle) {
-				vx = -vx;
+				vy = -vy;
 			}
 		}
 		GLabel label = new GLabel ("YOU LOST!!!",(WIDTH-200)/2,HEIGHT/2);
