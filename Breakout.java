@@ -110,19 +110,30 @@ public class Breakout extends GraphicsProgram {
 		add(paddle);
 	}
 	
-	   public void mouseMoved(MouseEvent e) {
-		   double paddleXPosition = e.getX() - lastX;
-		   paddle.move(paddleXPosition, 0);
-		   lastX = e.getX();
-		   if (lastX<0) {
-		   paddle.setLocation(0, HEIGHT-PADDLE_Y_OFFSET);
-		   } else if (lastX>WIDTH-PADDLE_WIDTH) {
-			   paddle.setLocation(WIDTH-PADDLE_WIDTH, HEIGHT-PADDLE_Y_OFFSET);
-		   }
-		   println(e.getX());
+	public void mouseMoved(MouseEvent e) {
+		double paddleXPosition = e.getX() - lastX;
+		paddle.move(paddleXPosition, 0);
+		lastX = e.getX();
+		if (lastX<0) {
+			paddle.setLocation(0, HEIGHT-PADDLE_Y_OFFSET);
+		} else if (lastX>WIDTH-PADDLE_WIDTH) {
+			paddle.setLocation(WIDTH-PADDLE_WIDTH, HEIGHT-PADDLE_Y_OFFSET);
 		}
+		println(e.getX());
+	}
+	
+	public void playGame() {
+		setupBall();
+	}
+	
+	public void setupBall() {
+		ball = new GOval (WIDTH/2,HEIGHT/2,BALL_RADIUS,BALL_RADIUS);
+		ball.setFilled(true);
+		add(ball);
+	}
 	
 	private GRect rect;
 	private GRect paddle;
 	private double lastX;
+	private GOval ball;
 }
