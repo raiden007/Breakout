@@ -136,7 +136,7 @@ public class Breakout extends GraphicsProgram {
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		vy += 3;
-		int speed = 10;
+		int speed = 20;
 		int lives = NTURNS;
 		
 		// moving the ball
@@ -144,7 +144,7 @@ public class Breakout extends GraphicsProgram {
 			ball.move(vx, vy);
 			pause(speed);
 			if (ball.getY()>=590) {
-				lives=0;
+				lives--;
 				vy = -vy;
 			} else if (ball.getY()<=0) {
 				vy = -vy;
@@ -153,14 +153,25 @@ public class Breakout extends GraphicsProgram {
 			} else if (ball.getX()>=390) {
 				vx = -vx;
 			}
+			GObject collider = getCollidingObject(ball.getX(),ball.getY());
+			println(collider);
 		}
 		GLabel label = new GLabel ("YOU LOST!!!",(WIDTH-200)/2,HEIGHT/2);
 		label.setFont("Serif-36");
 		label.setColor(Color.RED);
 		add(label);
-		//TODO: Add Label to end the game
 	}
 	
+	private GObject getCollidingObject(double x, double y) {
+		GObject object = null;
+		if (getElementAt(x,y)==null) {
+			return null;
+		} else {
+			return object;
+		}
+		
+		
+	}
 	
 	
 	
