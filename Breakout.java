@@ -154,7 +154,7 @@ public class Breakout extends GraphicsProgram {
 				vx = -vx;
 			}
 		}
-		GLabel label = new GLabel ("YOU LOST!!!",(WIDTH-20)/2,HEIGHT/2);
+		GLabel label = new GLabel ("YOU LOST!!!",(WIDTH-100)/2,HEIGHT/2);
 		label.setFont("Serif-36");
 		label.setColor(Color.RED);
 		add(label);
