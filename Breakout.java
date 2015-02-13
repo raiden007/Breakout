@@ -117,7 +117,7 @@ public class Breakout extends GraphicsProgram {
 //			   testBoundaries = 0;
 //		   } else if (testBoundaries>WIDTH) {
 //			   testBoundaries = WIDTH;
-		   }
+//		   }
 		   println(e.getX());
 		}
 	
