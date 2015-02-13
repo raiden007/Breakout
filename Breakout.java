@@ -66,7 +66,12 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void setupGame() {
+		
+		setupBricks();
+	}
 			
+	private void setupBricks() {
+		
 		int startXPosition = (WIDTH-(BRICK_WIDTH*NBRICKS_PER_ROW))/2;
 		int startYPosition = BRICK_Y_OFFSET;
 		
