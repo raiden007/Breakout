@@ -145,7 +145,7 @@ public class Breakout extends GraphicsProgram {
 			ball.move(vx, vy);
 			pause(speed);
 			if (ball.getY()>=570) {
-//				lives--;
+				lives--;
 				vy = -vy;
 			} else if (ball.getY()<=0) {
 				vy = -vy;
@@ -162,7 +162,7 @@ public class Breakout extends GraphicsProgram {
 				timesHitPaddle++;
 				vy = -vy;
 				if (timesHitPaddle==7) {
-					speed--;
+					speed = speed - 0.5;
 					timesHitPaddle=0;
 				}
 			// If not then it's only a brick so reverse the movement and remove the object
@@ -235,5 +235,5 @@ public class Breakout extends GraphicsProgram {
 	private GOval ball;
 	private double vx, vy;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private int speed;
+	private double speed;
 }
