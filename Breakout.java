@@ -145,12 +145,12 @@ public class Breakout extends GraphicsProgram {
 			pause(speed);
 			if (ball.getY()>=590) {
 				lives--;
-				GLabel label = new GLabel ("You have "+lives+" lives left!",(WIDTH-200)/2,HEIGHT/2);
+				GLabel label = new GLabel ("You have "+lives+" lives left!",(WIDTH-500)/2,HEIGHT/2);
 				label.setFont("Serif-36");
 				label.setColor(Color.RED);
 				add(label);
 				vy = -vy;
-				pause(100);
+				pause(200);
 				remove(label);
 			} else if (ball.getY()<=0) {
 				vy = -vy;
