@@ -59,7 +59,7 @@ public class Breakout extends GraphicsProgram {
 
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
-		this.resize(450,HEIGHT);
+		this.resize(450,800);
         pause(100);
 		setupGame();
 //		playGame();
@@ -102,7 +102,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void setupPaddle() {
-		GRect paddle = new GRect (100,HEIGHT,PADDLE_WIDTH,PADDLE_HEIGHT);
+		GRect paddle = new GRect (100,HEIGHT-PADDLE_Y_OFFSET,PADDLE_WIDTH,PADDLE_HEIGHT);
 		add(paddle);
 	}
 	
