@@ -153,32 +153,43 @@ public class Breakout extends GraphicsProgram {
 			} else if (ball.getX()>=390) {
 				vx = -vx;
 			}
+			// Check for collisions
 			GObject collider = getCollidingObject(ball.getX(),ball.getY());
-			println(collider);
+//			println(collider);
+			// If it's the paddle reverse the Y movement
 			if (collider==paddle) {
 				vy = -vy;
+			// If not then it's only a brick so reverse the movement and remove the object
 			}  else if (collider!=null) {
 				remove(collider);
 				vy = -vy;
 				
 			}
 		}
+		// Label to show when you have lost
 		GLabel label = new GLabel ("YOU LOST!!!",(WIDTH-200)/2,HEIGHT/2);
 		label.setFont("Serif-36");
 		label.setColor(Color.RED);
 		add(label);
 	}
 	
+	// Get Collision method
 	private GObject getCollidingObject(double x, double y) {
+		// Get elements in all 4 corners of the ball
 		GObject topLeftCollision = getElementAt(x,y);
 		GObject topRightCollision = getElementAt(x+10,y);
 		GObject lowerLeftCollision = getElementAt(x,y+10);
 		GObject lowerRightCollision = getElementAt(x+10,y+10);
+		// If there is no collision on top left
 		if (topLeftCollision==null) {
+			// And no collision on top right
 			if (topRightCollision==null) {
+				// And no collision on lower left
 				if (lowerLeftCollision==null) {
+					// And no collision on lower right return null
 					if (lowerRightCollision==null) {
 						return null;
+					// Otherwise return where the collision occured
 					} else {
 						return lowerRightCollision;
 					}
@@ -203,6 +214,5 @@ public class Breakout extends GraphicsProgram {
 	private GOval ball;
 	private double vx, vy;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private GObject object;
 	private int speed;
 }
