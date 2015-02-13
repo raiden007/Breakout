@@ -154,7 +154,7 @@ public class Breakout extends GraphicsProgram {
 				vx = -vx;
 			}
 		}
-		GLabel label = new GLabel ("YOU LOST!!!",100,100);
+		GLabel label = new GLabel ("YOU LOST!!!",WIDTH/2,HEIGHT/2);
 		add(label);
 		//TODO: Add Label to end the game
 	}
