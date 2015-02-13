@@ -61,6 +61,7 @@ public class Breakout extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 		this.resize(450,650);
         pause(100);
+        addMouseListeners();
 		setupGame();
 //		playGame();
 	}
@@ -111,6 +112,7 @@ public class Breakout extends GraphicsProgram {
 	   public void mouseDragged(MouseEvent e) {
 		      double paddleXPosition = e.getX();
 		      paddle.move(paddleXPosition, HEIGHT-PADDLE_Y_OFFSET);
+		      paddle.
 		}
 	
 	private GRect rect;
