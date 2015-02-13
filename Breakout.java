@@ -163,7 +163,6 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private GObject getCollidingObject(double x, double y) {
-		getElementAt(x,y);
 		println(getElementAt(x,y));
 		return ball ;
 	}
