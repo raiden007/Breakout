@@ -114,12 +114,12 @@ public class Breakout extends GraphicsProgram {
 		   double testBoundaries = paddleXPosition;
 		   paddle.move(testBoundaries, 0);
 		   lastX = e.getX();
-		   if (paddleXPosition<0) {
-			   paddleXPosition = 0;
-		   } else if (paddleXPosition>WIDTH) {
-			   paddleXPosition = WIDTH;
+		   if (testBoundaries<0) {
+			   testBoundaries = 0;
+		   } else if (testBoundaries>WIDTH) {
+			   testBoundaries = WIDTH;
 		   }
-		   println(paddleXPosition);
+		   println(testBoundaries);
 		}
 	
 	private GRect rect;
