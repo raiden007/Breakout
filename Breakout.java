@@ -169,6 +169,15 @@ public class Breakout extends GraphicsProgram {
 			}  else if (collider!=null) {
 				remove(collider);
 				vy = -vy;
+				removedBricks++;
+				println(removedBricks);
+				if (removedBricks==50) {
+					GLabel label = new GLabel ("YOU WON!!!",(WIDTH-200)/2,HEIGHT/2);
+					label.setFont("Serif-36");
+					label.setColor(Color.RED);
+					add(label);
+				}
+				
 				
 			}
 		}
@@ -236,4 +245,5 @@ public class Breakout extends GraphicsProgram {
 	private double vx, vy;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private double speed;
+	private int removedBricks=0;
 }
