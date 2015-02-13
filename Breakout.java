@@ -118,6 +118,7 @@ public class Breakout extends GraphicsProgram {
 		   } else if (paddleXPosition>WIDTH) {
 			   paddleXPosition = WIDTH;
 		   }
+		   println(paddleXPosition);
 		}
 	
 	private GRect rect;
