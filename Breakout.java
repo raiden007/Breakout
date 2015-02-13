@@ -154,7 +154,7 @@ public class Breakout extends GraphicsProgram {
 				vx = -vx;
 			}
 			GObject collider = getCollidingObject(ball.getX(),ball.getY());
-	//		println(collider);
+			println(collider);
 		}
 		GLabel label = new GLabel ("YOU LOST!!!",(WIDTH-200)/2,HEIGHT/2);
 		label.setFont("Serif-36");
@@ -163,8 +163,12 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private GObject getCollidingObject(double x, double y) {
-		println(getElementAt(x,y));
-		return ball ;
+		GObject topLeftCollision = getElementAt(x,y);
+		if (object==null) {
+			return null;
+		} else {
+			return topLeftCollision;
+		}
 	}
 	
 	
