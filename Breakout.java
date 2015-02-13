@@ -144,7 +144,7 @@ public class Breakout extends GraphicsProgram {
 		while (lives>0) {
 			ball.move(vx, vy);
 			pause(speed);
-			if (ball.getY()>=570) {
+			if (ball.getY()>=560) {
 //				lives--;
 				vy = -vy;
 			} else if (ball.getY()<=0) {
