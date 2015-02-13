@@ -151,9 +151,6 @@ public class Breakout extends GraphicsProgram {
 			} else if (ball.getX()>=390) {
 				vx = -vx;
 			}
-			for (int i=0;i<speed;i++) {
-				speed--;
-			}
 		}
 	}
 	
