@@ -168,7 +168,7 @@ public class Breakout extends GraphicsProgram {
 			// If not then it's only a brick so reverse the movement and remove the object
 			}  else if (collider!=null) {
 				remove(collider);
-				vy = -vy;
+//				vy = -vy;
 				removedBricks++;
 				println(removedBricks);
 				if (removedBricks==100) {
