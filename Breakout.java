@@ -135,7 +135,7 @@ public class Breakout extends GraphicsProgram {
 			while (true) {
 				vx = rgen.nextDouble(1.0, 3.0);
 				ball.move(vx, vy);
-				pause(1000);
+				pause(100);
 			}
 	}
 	
