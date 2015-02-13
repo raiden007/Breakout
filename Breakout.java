@@ -136,7 +136,7 @@ public class Breakout extends GraphicsProgram {
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		vy += 3;
-		int speed = 20;
+		int speed = 10;
 		int lives = NTURNS;
 		
 		// moving the ball
@@ -144,7 +144,7 @@ public class Breakout extends GraphicsProgram {
 			ball.move(vx, vy);
 			pause(speed);
 			if (ball.getY()>=590) {
-				lives--;
+			//	lives--;
 				vy = -vy;
 			} else if (ball.getY()<=0) {
 				vy = -vy;
