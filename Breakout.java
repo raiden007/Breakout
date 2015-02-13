@@ -136,7 +136,7 @@ public class Breakout extends GraphicsProgram {
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		vy += 3;
-		int speed = 20;
+		speed = 10;
 		int lives = NTURNS;
 		
 		// moving the ball
@@ -204,4 +204,5 @@ public class Breakout extends GraphicsProgram {
 	private double vx, vy;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private GObject object;
+	private int speed;
 }
