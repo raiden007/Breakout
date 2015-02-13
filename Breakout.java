@@ -130,10 +130,16 @@ public class Breakout extends GraphicsProgram {
 		ball = new GOval ((WIDTH-BALL_RADIUS)/2,(HEIGHT-BALL_RADIUS)/2,BALL_RADIUS,BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball);
+		vx = rgen.nextDouble(1.0, 3.0);
+		if (rgen.nextBoolean(0.5)) vx = -vx;
+		vy += 3;
+		ball.move(vx, vy);
 	}
 	
 	private GRect rect;
 	private GRect paddle;
 	private double lastX;
 	private GOval ball;
+	private double vx, vy;
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 }
