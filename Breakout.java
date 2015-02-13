@@ -59,8 +59,6 @@ public class Breakout extends GraphicsProgram {
 
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
-		setSize(400, 800);
-		pause(1000);
         addMouseListeners();
 		setupGame();
 		playGame();
@@ -146,7 +144,11 @@ public class Breakout extends GraphicsProgram {
 			ball.move(vx, vy);
 			pause(speed);
 			if (ball.getY()>=590) {
-//				lives--;
+				lives--;
+				GLabel label = new GLabel ("You have "+lives+" lives left!",(WIDTH-200)/2,HEIGHT/2);
+				label.setFont("Serif-36");
+				label.setColor(Color.RED);
+				add(label);				
 				vy = -vy;
 			} else if (ball.getY()<=0) {
 				vy = -vy;
