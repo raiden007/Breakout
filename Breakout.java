@@ -117,7 +117,7 @@ public class Breakout extends GraphicsProgram {
 		   paddle.move(paddleXPosition, 0);
 		   paddle.setLocation(0, HEIGHT-PADDLE_Y_OFFSET);
 		   } else if (lastX>WIDTH) {
-			   paddle.setLocation(600, HEIGHT-PADDLE_Y_OFFSET);
+			   paddle.setLocation(350, HEIGHT-PADDLE_Y_OFFSET);
 		   }
 		   println(e.getX());
 		}
