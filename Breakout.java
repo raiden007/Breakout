@@ -115,6 +115,8 @@ public class Breakout extends GraphicsProgram {
 		   lastX = e.getX();
 		   if (paddleXPosition<0) {
 			   paddleXPosition = 0;
+		   } else if (paddleXPosition>WIDTH) {
+			   paddleXPosition = WIDTH;
 		   }
 		}
 	
