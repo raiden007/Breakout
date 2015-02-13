@@ -207,13 +207,14 @@ public class Breakout extends GraphicsProgram {
 	
 	private void showTimer() {
 		for (int i=0;i<3;i++) {
-			int seconds = i;
+			int seconds = 3;
 			GLabel label = new GLabel (""+seconds,(WIDTH-50)/2,(HEIGHT-100)/2);
 			label.setFont("Serif-36");
 			label.setColor(Color.RED);
 			add(label);
 			pause(1000);
 			remove(label);
+			seconds--;
 		}
 
 	}
