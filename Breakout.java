@@ -144,7 +144,7 @@ public class Breakout extends GraphicsProgram {
 			ball.move(vx, vy);
 			pause(speed);
 			if (ball.getY()>=590) {
-			//	lives--;
+				lives--;
 				vy = -vy;
 			} else if (ball.getY()<=0) {
 				vy = -vy;
@@ -154,6 +154,8 @@ public class Breakout extends GraphicsProgram {
 				vx = -vx;
 			}
 		}
+		GLabel label = new GLabel ("YOU LOST!!!",100,100);
+		add(label);
 		//TODO: Add Label to end the game
 	}
 	
