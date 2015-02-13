@@ -148,8 +148,9 @@ public class Breakout extends GraphicsProgram {
 				GLabel label = new GLabel ("You have "+lives+" lives left!",(WIDTH-200)/2,HEIGHT/2);
 				label.setFont("Serif-36");
 				label.setColor(Color.RED);
-				add(label);				
+				add(label);
 				vy = -vy;
+				remove(label);
 			} else if (ball.getY()<=0) {
 				vy = -vy;
 			} else if (ball.getX()<=0) {
