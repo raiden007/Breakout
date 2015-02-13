@@ -136,7 +136,7 @@ public class Breakout extends GraphicsProgram {
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		vy += 3;
-		speed = 5;
+		speed = 10;
 		showTimer();
 		// moving the ball
 		int lives = NTURNS;
@@ -168,7 +168,7 @@ public class Breakout extends GraphicsProgram {
 			// If not then it's only a brick so reverse the movement and remove the object
 			}  else if (collider!=null) {
 				remove(collider);
-//				vy = -vy;
+				vy = -vy;
 				removedBricks++;
 				println(removedBricks);
 				if (removedBricks>=100) {
