@@ -155,7 +155,7 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 		GLabel label = new GLabel ("YOU LOST!!!",(WIDTH-20)/2,HEIGHT/2);
-		label.setFont("London-36");
+		label.setFont("Serif-36");
 		label.setColor(Color.RED);
 		add(label);
 		//TODO: Add Label to end the game
