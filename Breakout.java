@@ -144,9 +144,9 @@ public class Breakout extends GraphicsProgram {
 					vy = -vy;
 				} else if (ball.getY()<=590) {
 					vy = -vy;
-				} else if (ball.getX()<=0) {
+				} else if (ball.getX()==0) {
 					vx = -vx;
-				} else if (ball.getX()>=400) {
+				} else if (ball.getX()==400) {
 					vx = -vx;
 				}
 			}
