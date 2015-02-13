@@ -207,7 +207,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private void showTimer() {
 
-		GLabel label = new GLabel ("3",WIDTH/2,(HEIGHT-100)/2);
+		GLabel label = new GLabel ("3",(WIDTH-50)/2,(HEIGHT-100)/2);
 		label.setFont("Serif-36");
 		label.setColor(Color.RED);
 		add(label);
