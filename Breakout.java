@@ -73,7 +73,7 @@ public class Breakout extends GraphicsProgram {
 	// Places the bricks
 	private void setupBricks() {
 		
-		int startXPosition = 0;		
+		int startXPosition = 5;		
 		int startYPosition = BRICK_Y_OFFSET;
 		// For each row adds bricks and color
 		for (int i=0;i<NBRICK_ROWS;i++) {
@@ -94,7 +94,7 @@ public class Breakout extends GraphicsProgram {
 					rect.setFillColor(Color.CYAN);
 				}
 			}
-			startXPosition = 0;
+			startXPosition = 5;
 			startYPosition += BRICK_HEIGHT+BRICK_SEP;
 		}
 		
