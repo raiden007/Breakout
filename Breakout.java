@@ -150,6 +150,7 @@ public class Breakout extends GraphicsProgram {
 				label.setColor(Color.RED);
 				add(label);
 				vy = -vy;
+				pause(100);
 				remove(label);
 			} else if (ball.getY()<=0) {
 				vy = -vy;
