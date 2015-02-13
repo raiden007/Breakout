@@ -96,7 +96,7 @@ public class Breakout extends GraphicsProgram {
 					rect.setFillColor(Color.CYAN);
 				}
 			}
-			startXPosition = (WIDTH-(BRICK_WIDTH*NBRICKS_PER_ROW))/2;;
+			startXPosition = 0;
 			startYPosition += BRICK_HEIGHT+BRICK_SEP;
 		}
 		
