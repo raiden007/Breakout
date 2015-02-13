@@ -113,8 +113,9 @@ public class Breakout extends GraphicsProgram {
 		   double paddleXPosition = e.getX() - lastX;
 		   paddle.move(paddleXPosition, 0);
 		   lastX = e.getX();
-
-		   
+		   if (paddleXPosition<0) {
+			   paddleXPosition = 0;
+		   }
 		}
 	
 	private GRect rect;
