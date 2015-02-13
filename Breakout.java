@@ -172,7 +172,6 @@ public class Breakout extends GraphicsProgram {
 				removedBricks++;
 				println(removedBricks);
 				if (removedBricks==100) {
-					lives=0;
 					GLabel label = new GLabel ("YOU WON!!!",(WIDTH-200)/2,HEIGHT/2);
 					label.setFont("Serif-36");
 					label.setColor(Color.RED);
