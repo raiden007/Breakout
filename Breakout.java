@@ -163,9 +163,9 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private GObject getCollidingObject(double x, double y) {
-		GObject object;
+		GObject object=null;
 		if (getElementAt(x,y)==null) {
-			return null;
+			return object;
 		} else {
 			return object;
 		}
