@@ -140,6 +140,7 @@ public class Breakout extends GraphicsProgram {
 		showTimer();
 		// moving the ball
 		int lives = NTURNS;
+		int timesHitPaddle = 0;
 		while (lives>0) {
 			ball.move(vx, vy);
 			pause(speed);
@@ -158,7 +159,12 @@ public class Breakout extends GraphicsProgram {
 //			println(collider);
 			// If it's the paddle reverse the Y movement
 			if (collider==paddle) {
+				timesHitPaddle++;
 				vy = -vy;
+				if (timesHitPaddle==7) {
+					vy = vy*2;
+					timesHitPaddle=0;
+				}
 			// If not then it's only a brick so reverse the movement and remove the object
 			}  else if (collider!=null) {
 				remove(collider);
