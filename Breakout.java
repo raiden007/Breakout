@@ -63,7 +63,7 @@ public class Breakout extends GraphicsProgram {
         pause(100);
         addMouseListeners();
 		setupGame();
-//		playGame();
+		playGame();
 	}
 	
 	private void setupGame() {
@@ -127,7 +127,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void setupBall() {
-		ball = new GOval (0,0,BALL_RADIUS,BALL_RADIUS);
+		ball = new GOval (0,0,100,100);
 //		ball.setFilled(true);
 		add(ball);
 	}
