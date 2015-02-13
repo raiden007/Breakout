@@ -206,11 +206,12 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void showTimer() {
-		pause(1000);
+
 		GLabel label = new GLabel ("3",(WIDTH-200)/2,HEIGHT/2);
 		label.setFont("Serif-36");
 		label.setColor(Color.RED);
 		add(label);
+		pause(1000);
 		remove(label);
 	}
 	
