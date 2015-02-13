@@ -163,7 +163,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private GObject getCollidingObject(double x, double y) {
-		GObject object = null;
+		GObject object;
 		if (getElementAt(x,y)==null) {
 			return null;
 		} else {
@@ -182,4 +182,5 @@ public class Breakout extends GraphicsProgram {
 	private GOval ball;
 	private double vx, vy;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
+	private GObject object;
 }
